@@ -1,0 +1,42 @@
+Index: src/main/java/com/ngocanh/spring5recipeapp/controllers/IndexController.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/main/java/com/ngocanh/spring5recipeapp/controllers/IndexController.java	(date 1519440786560)
++++ src/main/java/com/ngocanh/spring5recipeapp/controllers/IndexController.java	(date 1519440786560)
+@@ -0,0 +1,13 @@
++package com.ngocanh.spring5recipeapp.controllers;
++
++import org.springframework.stereotype.Controller;
++import org.springframework.web.bind.annotation.RequestMapping;
++
++@Controller
++public class IndexController {
++
++    @RequestMapping({"", "/", "/index"})
++    public String getIndexPage(){
++        return "index";
++    }
++}
+Index: src/main/resources/templates/index.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/main/resources/templates/index.html	(date 1519440900096)
++++ src/main/resources/templates/index.html	(date 1519440900096)
+@@ -0,0 +1,12 @@
++<!DOCTYPE html>
++<html lang="en" xmlns:th="http://www.thymeleaf.org">
++<head>
++    <meta charset="UTF-8">
++    <title>Recipe Home</title>
++</head>
++<body>
++
++    <h1>My Recipe!</h1>
++
++</body>
++</html>
+\ No newline at end of file
