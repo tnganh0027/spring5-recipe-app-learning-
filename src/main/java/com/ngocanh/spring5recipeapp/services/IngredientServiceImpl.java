@@ -97,7 +97,7 @@ public class IngredientServiceImpl implements IngredientService {
                 savedIngredient = saveRecipe.getIngredients().stream()
                         .filter( recipeIngredients -> recipeIngredients.getDescription().equals(command.getDescription()))
                         .filter(recipeIngredients -> recipeIngredients.getAmount().equals(command.getAmount()))
-                        .filter(recipeIngredient -> recipeIngredient.getUom().equals(command.getUom()))
+                        .filter(recipeIngredient -> recipeIngredient.getUom().getId().equals(command.getUom().getId()))
                         .findFirst();
             }
 
